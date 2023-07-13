@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
+// Raw data
 const pizzaData = [
   {
     name: "Focaccia",
@@ -45,22 +47,49 @@ const pizzaData = [
   },
 ];
 
-function App() {
+// components of website we gonna build
+
+function Header() {
+  return <h1>Fast React Pizza Co.</h1>;
+}
+
+function Menu() {
   return (
-    <div>
+    <>
+      <h1>Menu</h1>
       <Pizza />
-      <Pizza />
-      <Pizza />
-    </div>
+    </>
   );
 }
 
+function Footer() {
+  const todaysDate = new Date().getHours();
+  console.log(todaysDate);
+  return (
+    <footer>
+      {new Date().toLocaleTimeString()} , We are Currently Working
+    </footer>
+  );
+}
+
+// pizaa component
 function Pizza() {
   return (
     <div>
       <img src="pizzas/spinaci.jpg" alt="pizza spinnaci" />
       <h1>Pizza Prosciutto</h1>
       <p>Tomato, mozarella, ham, aragula, and burrata cheese</p>
+    </div>
+  );
+}
+
+// main app component
+function App() {
+  return (
+    <div>
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
