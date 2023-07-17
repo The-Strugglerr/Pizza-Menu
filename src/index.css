@@ -56,6 +56,7 @@ body {
 .header h1::after {
   display: block;
   content: "";
+
   height: 3px;
   width: 12rem;
   background-color: #edc84b;
@@ -65,10 +66,12 @@ body {
 
 .header h1::before {
   left: 0;
+  margin-left: 3.5rem;
 }
 
 .header h1::after {
   right: 0;
+  margin-right: 3.5rem;
 }
 
 /* *************** */
@@ -99,6 +102,7 @@ body {
 }
 
 .pizzas {
+  margin-left: 5.5rem;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;

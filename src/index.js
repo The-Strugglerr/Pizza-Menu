@@ -53,24 +53,22 @@ const pizzaData = [
 function Header() {
   return (
     <header className="header">
-      <h1>Fast React Pizza Co.</h1>
+      <h1>The Pizza Parlor </h1>
     </header>
   );
 }
 
 // pizaa component
-function Pizza(props) {
-  console.log(props);
-  const sold = props.pizzaData.soldOut;
+function Pizza({ pizzaData }) {
+  const sold = pizzaData.soldOut;
 
   return (
-    <li className={sold ? "pizza sold-out" : "pizza "}>
-      <img src={props.pizzaData.photoName} alt={props.pizzaData.name} />
+    <li className={`pizza ${sold ? "sold-out" : ""}`}>
+      <img src={pizzaData.photoName} alt={pizzaData.name} />
       <article>
-        <h3>{props.pizzaData.name}</h3>
-        <p>{props.pizzaData.ingredients}</p>
-        <span>{props.pizzaData.price}</span>
-        {sold ? <span>Sold Out</span> : null}
+        <h3>{pizzaData.name}</h3>
+        <p>{pizzaData.ingredients}</p>
+        <span>{sold ? "SOLD-OUT" : pizzaData.price}</span>
       </article>
     </li>
   );
@@ -81,13 +79,22 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Menu</h2>
+
       {pizzaCount > 0 ? (
-        <ul className="pizzas">
-          {pizzaData.map((pizza) => (
-            <Pizza pizzaData={pizza} key={pizza.name} />
-          ))}
-        </ul>
-      ) : null}
+        <>
+          <p>
+            Authentic Italian cuisine. 6 creative dishes to choose from. All
+            from our stone oven, all organic, all delicious.
+          </p>
+          <ul className="pizzas">
+            {pizzaData.map((pizza) => (
+              <Pizza pizzaData={pizza} key={pizza.name} />
+            ))}
+          </ul>
+        </>
+      ) : (
+        <p>We are working on menu please come back later after some timee :)</p>
+      )}
 
       {/* <Pizza
         pizzaName="Pizza Prosciutto"
@@ -125,7 +132,7 @@ function Footer() {
 
   return (
     <footer className="footer">
-      {isOpen ? (
+      {isOpen > 0 ? (
         <Order closeHour={closeHour} />
       ) : (
         <p>
