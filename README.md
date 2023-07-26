@@ -1,37 +1,6 @@
-# Getting Started with Create React App
+# Pizza Parlour
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A UI for a pizza-Menu. 
 
-Just Download all the files then open them in editor and in editor command line type npm install it will install all the dependencies using package.json.
-then type npm start to run this project on local host.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ScreenShot : 
+![Screenshot 2023-07-26 222309](https://github.com/nmn-yd/Pizza-Menu/assets/97431919/5297216a-1d91-4fe3-885f-4aa26ad6d856)
